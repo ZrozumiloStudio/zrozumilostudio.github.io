@@ -8,6 +8,21 @@
       font-family: system-ui;
       background-color:#383838;
     }
+    .button {
+      top:50%;
+      background-color:#6b634b;
+      border:none;
+      border-radius:5px;
+      min-height:30px;
+      min-width: 120px;
+    }
+    .button:hover {
+      background-color:#42ff42;
+      transition: 0.7s;
+    }
+    .button:active {
+    background-color: #ffbf00;
+    }
   </style>
   <meta name="author" content="ZrozDev">
   <meta name="description" content="A free hardcore browser game from the first person where you, as a rooster, must escape from a farm contaminated with radiation, you must correctly distribute resources and craft medicines">
@@ -35,6 +50,7 @@
 <body>
   <h1 style="color:#42ff42";>ChickenFine Rooster Coop FPS</h1>
  <p style="color:#abffab";>A hardcore shooter where you turn into a rooster... your wings get wet and dissolve under the acid rain and the sky is painted mint...</p>
+  <button class = "button" onclick="downloadFile('ChickenFineRCFR.zip')">Download ChickenFine</button>
   <img src="images/image.jpg" width="200" height="100" />
   <h2 style="color:#42ff42";>Gameplay</h2>
   <p style="color:#abffab";>To survive, you have to manage the local currency properly and buy medicines on time. Your main goal is to buy an R.P.A suit that protects well from the rain. There are a lot of heals here like a small first aid kit, a large first aid kit, a medium first aid kit, syringes, bandages, and so on...</p>
@@ -49,5 +65,15 @@
   <p style="color:#ffeb78";>now XP is replaced by "Zelenolit" ore and the action takes place at the "Yellow Mountain" plant, where there is a lot of radiation and because of this the game is very hardcore. The player has only 30 HP and a very weak revolver, bonuses like a bomb that increases XP were removed and the RPA suit was strengthened, The DLC also has incredible original music and wonderful ambient!</p>
   <h2 style="color:#ffe342";>Plot</h2>
   <p style="color:#ffeb78";>after the events of the main game you get out of the farm but to leave the exclusion zone that was formed you will need to go through the very center... the "Yellow Mountain" plant.</p>
+  <script>
+    function downloadFile(fileName) {
+        var link = document.createElement('a');
+        link.href = fileName;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+  </script>
 </body>
 </html>
